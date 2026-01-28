@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <!--css-->
+  <link rel="stylesheet" href="/distr/styles.css">
+
+  <!--favicon-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+</head>
+
+<body>
+
+  <main class="flex flex-jc-c flex-ai-c">
+    <div class="container">
+      <div class="img">
+        <img src="./images/image-header-mobile.jpg" alt="corporate office" class="mobile-img">
+        <img src="/images/image-header-desktop.jpg" alt="corporate office" class="desktop-img">
+
+        <div class="img-hover"></div>
+      </div>
+
+      <div class="sub-container flex flex-jc-c flex-ai-c">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+
+        <p>
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
+          overall efficiency.
+        </p>
+
+        <div class="stats flex flex-jc-c">
+          <div class="stats__companies">
+            <p><span>10k+</span></p><p>companies</p> 
+          </div>
+          <div class="stats__templates">
+            <p><span>314</span></p> <p>templates</p>
+          </div>
+          <div class="stats__queries">
+            <p><span>12M+</span></p> <p>queries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

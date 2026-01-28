@@ -1,0 +1,162 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+//flexbox
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+}
+
+// img {
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: $navy;
+    color: $white-75;
+
+    font-family: $main;
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+main {
+    height: 100svh;
+}
+
+
+.container {
+    width: 88%;
+    max-width: 480px;
+
+    background-color: $blue;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: all 500ms ease-in-out;
+
+    .img {
+        position: relative;
+
+        .img-hover {
+            position: absolute;
+            background-color: $purple;
+            mix-blend-mode: multiply;
+            // opacity: .6;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+}
+
+.sub-container {
+    padding: 2rem;
+
+    h1 {
+        margin-block-start: 5px;
+        color: $white;
+        line-height: 1.1;
+        font-size: 28px;
+
+        span {
+            color: $purple;
+        }
+    }
+
+    p {
+        line-height: 1.7;
+    }
+}
+
+.stats {
+    flex-direction: column;
+    gap: 1.125rem;
+    margin-block-start: 2.25rem;
+    transition: all 300ms ease-in-out;
+
+    p {
+        color: $white-60;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: $alt;
+        letter-spacing: 1px;
+        margin: 0;
+
+        span {
+            font-size: 1.5rem;
+            font-weight: $bold;
+            text-transform: none;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 475px) {
+    .stats {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 1140px) {
+    .container {
+        min-width: 1100px;
+        max-height: 28rem;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+
+        .mobile-img {
+            display: none;
+        }
+
+        .desktop-img {
+            display: block;
+            height: 100%;
+        }
+
+        .img {
+            width: 100%;
+        }
+        .sub-container {
+            width: 100%;
+            justify-content: left;
+            padding: 4.5rem;
+
+            h1 {
+                margin-block-start: 0;
+                font-size: 2.25rem;
+            }
+
+            > p {
+                margin-block-start: 2rem;
+            }
+        }
+    }
+}
